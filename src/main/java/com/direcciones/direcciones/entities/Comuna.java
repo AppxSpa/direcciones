@@ -1,6 +1,5 @@
 package com.direcciones.direcciones.entities;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,10 +21,11 @@ public class Comuna {
     private String codComuna;
 
     @ManyToOne
-    @JoinColumn(name = "provincia_id", nullable = false) 
+    @JoinColumn(name = "provincia_id", nullable = false)
     private Provincia provincia;
 
-    public Comuna() {}
+    public Comuna() {
+    }
 
     public Comuna(String nombre, Provincia provincia) {
         this.nombreComuna = nombre;
@@ -72,5 +72,10 @@ public class Comuna {
         return provincia.getNombreRegion();
     }
 
-    
+    public Long getProvinciaId() {
+        return provincia.getId();
+    }
+
+
+
 }
