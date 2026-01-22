@@ -13,4 +13,3 @@ sudo docker run \
            --add-host=host.docker.internal:host-gateway \
            --name direcciones-container direcciones \
            mirkogutierrezappx/direcciones:latest
-
